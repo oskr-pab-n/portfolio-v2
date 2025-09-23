@@ -5,13 +5,13 @@ name: Deploy to Firebase Hosting to Demo
       - main
 jobs:
   build_and_deploy:
-    if: ${{ github.repository }} == 'hrishikeshpaul/portfolio-template-v2'
+    if: ${{ github.repository }} == 'portfolio-v2'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           
